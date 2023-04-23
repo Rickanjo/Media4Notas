@@ -42,4 +42,4 @@ if ( media < 5)
 }
 Console.Write($"Resultado: {resultado}");
 }
-Console.ForegroundColor = ConsoleColor.Black;
+Console.ResetColor();
