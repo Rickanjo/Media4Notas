@@ -28,18 +28,24 @@ if (nota1 < 0.0 || nota1 > 10.0 ||
 Console.ForegroundColor = ConsoleColor.Gray;
 Console.WriteLine($"Você ficou com média {media:N1}.");
 
+ConsoleColor  corResultado;
+
+
+
 if ( media < 5)
 {
-    Console.ForegroundColor = ConsoleColor.Red;
+    corResultado = ConsoleColor.Red;
     resultado = "Reprovado";
 } else if (media > 6)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
+    corResultado = ConsoleColor.Green;
     resultado = "Aprovado";
 } else {
-    Console.ForegroundColor = ConsoleColor.Blue;
+    corResultado = ConsoleColor.Blue;
     resultado = "Em recuperação";
 }
-Console.Write($"Resultado: {resultado}");
+Console.Write("Resultado: ");
+Console.ForegroundColor = corResultado;
+Console.Write($"{resultado}");
 }
 Console.ResetColor();
